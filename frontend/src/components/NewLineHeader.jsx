@@ -1,7 +1,11 @@
 import React from 'react'
 import Logo from '../../public/NewLineCropped.png'
+import { useNavigate } from 'react-router-dom'
 
 export default function NewLineHeader() {
+
+    const nav = useNavigate();
+
     return (
         <>
         <header className="header">
@@ -15,7 +19,7 @@ export default function NewLineHeader() {
                     <a className="nav-link" href="#">Tech Pulse</a>
                 </div>
                 <div className="header-buttons">
-                    <button className="btn btn-primary">
+                    <button className="btn btn-primary" onClick={() => nav('/learning-home')}>
                         <span>Start Learning</span>
                     </button>
                     <button className="btn btn-secondary">

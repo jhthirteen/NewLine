@@ -5,8 +5,12 @@ import FeatureCard from '../components/FeatureCard.jsx'
 import NewLineFooter from '../components/NewLineFooter.jsx'
 import { FaRegLightbulb, FaCode, FaChartPie } from "react-icons/fa"
 import { CiWavePulse1 } from "react-icons/ci"
+import { useNavigate } from 'react-router-dom'
 
 export default function LandingPage() {
+
+    const nav = useNavigate();
+
     return (
         <>
             <div className="main-container">
@@ -21,7 +25,7 @@ export default function LandingPage() {
                                         <h1 className="hero-title">Learn to Code. See the Trends. Build Your Career.</h1>
                                         <h2 className="hero-subtitle">NewLine is a platform empowering self learners. Master computer science concepts, understand industry trends, and build a clear path to a career in tech.</h2>
                                     </div>
-                                    <button className="btn btn-primary hero-btn">
+                                    <button className="btn btn-primary hero-btn" onClick={() => nav('/learning-home')}>
                                         <span>Start Learning</span>
                                     </button>
                                 </div>
